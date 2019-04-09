@@ -22,9 +22,9 @@
     },
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/raf-handler/issues"
+        "url": "https://github.com/williammanco/raf-handler/issues"
     },
-    "homepage": "https://github.com/raf-handler#readme",
+    "homepage": "https://github.com/williammanco/raf-handler#readme",
     "devDependencies": {
         "eslint": "^4.19.1",
         "eslint-config-airbnb-base": "^13.1.0",
