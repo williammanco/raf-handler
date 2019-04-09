@@ -1,34 +1,34 @@
 {
-    "name": "raf-handler",
-    "version": "0.0.0",
-    "description": "Use for centralize request animation frame",
-    "main": "src",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "rollup src/main.js -o ./dist/bundle.js -f cjs"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/williammanco/raf-handler.git"
-    },
-    "keywords": [
-        "rAF",
-        "requestAnimationFrame"
-    ],
-    "author": {
-        "name": "William Manco",
-        "email": "wmanco88@gmail.com",
-        "url": "https://williamman.co"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/williammanco/raf-handler/issues"
-    },
-    "homepage": "https://github.com/williammanco/raf-handler#readme",
-    "devDependencies": {
-        "eslint": "^4.19.1",
-        "eslint-config-airbnb-base": "^13.1.0",
-        "rollup-plugin-uglify": "^6.0.2",
-        "rollup": "^1.9.0"
-    }
+  "name": "raf-handler",
+  "version": "0.0.1",
+  "description": "Use for centralize request animation frame",
+  "main": "src",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup src/main.js -o ./dist/bundle.js -f cjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williammanco/raf-handler.git"
+  },
+  "keywords": [
+    "rAF",
+    "requestAnimationFrame"
+  ],
+  "author": {
+    "name": "William Manco",
+    "email": "wmanco88@gmail.com",
+    "url": "https://williamman.co"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williammanco/raf-handler/issues"
+  },
+  "homepage": "https://github.com/williammanco/raf-handler#readme",
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "rollup-plugin-uglify": "^6.0.2",
+    "rollup": "^1.9.0"
+  }
 }
