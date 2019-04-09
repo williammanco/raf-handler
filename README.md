@@ -62,7 +62,7 @@ export default () => {
 ```
 
 ## Other function - Example
-** Use with an external rAF
+*Use with an external rAF* 
 
 ```js
 import { subscribeUpdate, update as updateRAF } from "raf-handler"
@@ -83,7 +83,7 @@ export default () => {
 
 ```
 
-** Reset all rAF function
+*Reset all rAF function* 
 
 ```js
 import { resetUpdate } from "raf-handler"
