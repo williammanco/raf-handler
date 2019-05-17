@@ -23,8 +23,13 @@ export const subscribeUpdate = fn => {
   store.rAF.push(fn)
 }
 
-export const unsubscribeUpdate = fn => {
-  store.rAF.splice(fn)
-}
+export const unsubscribeUpdate = (fn) => {
+  for (let i = 0, { length } = store.rAF; i < length; i++) {
+    if (store.rAF[i] === fn) {
+      store.rAF.splice(i, 1);
+      i--;
+    }
+  }
+};
 
 export default initUpdate
