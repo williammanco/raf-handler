@@ -2,7 +2,7 @@
   "name": "raf-handler",
   "version": "0.0.1",
   "description": "Use for centralize request animation frame",
-  "main": "src",
+  "main": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup src/main.js -o ./dist/bundle.js -f cjs"
