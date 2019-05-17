@@ -13,19 +13,13 @@ From an idea of [Lorenzo Migliorero](https://github.com/lorenzomigliorero)
 yarn add raf-handler
 ```
 
-## Build
-
-```sh
-yarn build
-```
-
 ## Usage - Example
 
 ```js
 import rAF, { subscribeUpdate, unsubscribeUpdate } from "raf-handler"
 
 
-rAF()
+rAF() // start animationFrameRequest
 
 export default () => {
   const update = timestamp => console.log(timestamp)
@@ -44,14 +38,14 @@ import rAF, { subscribeUpdate, unsubscribeUpdate } from "raf-handler"
 
 
 export default () => {
-  useMemo(() => rAF(), []) // autoinit only one time
+  useMemo(rAF, []) // autoinit only one time
 
   const update = useCallback(timestamp => {
     console.log(timestamp)
   }, [])
 
   useEffect(() => {
-      subscribeUpdate(update) // add your function on component is ready
+      subscribeUpdate(update) // add your function
     return () => {
       unsubscribeUpdate(update) // remove when unmount
     }
@@ -90,6 +84,12 @@ import { resetUpdate } from "raf-handler"
 
 resetUpdate()
 
+```
+
+## Build
+
+```sh
+yarn build
 ```
 
 # License
