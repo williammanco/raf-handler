@@ -1,3 +1,8 @@
+if (!global.requestAnimationFrame) {
+  global.requestAnimationFrame = () => null
+  global.cancelAnimationFrame = () => null
+}
+
 export const store = {
   rAF: []
 }
@@ -5,7 +10,7 @@ const id = { current: null }
 
 export const update = timestamp => {
   const { rAF } = store
-  for (let i = 0; i < rAF.length; i += 1) rAF[i](timestamp)
+  for (let i = 0, { length } = rAF;  i < length; i += 1) rAF[i](timestamp)
 }
 
 const initUpdate = timestamp => {
@@ -24,8 +29,9 @@ export const subscribeUpdate = fn => {
 }
 
 export const unsubscribeUpdate = (fn) => {
-  for (let i = 0, { length } = store.rAF; i < length; i++) {
-    if (store.rAF[i] === fn) {
+  const { rAF } = store
+  for (let i = 0, { length } = rAF; i < length; i += 1) {
+    if (rAF[i] === fn) {
       store.rAF.splice(i, 1);
       i--;
     }
