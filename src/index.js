@@ -3,19 +3,15 @@ if (!global.requestAnimationFrame) {
   global.cancelAnimationFrame = () => null
 }
 
+const id = { current: null }
+
 export const store = {
   rAF: []
 }
-const id = { current: null }
 
 export const update = timestamp => {
   const { rAF } = store
   for (let i = 0, { length } = rAF;  i < length; i += 1) rAF[i](timestamp)
-}
-
-const initUpdate = timestamp => {
-  update(timestamp)
-  id.current = global.requestAnimationFrame(initUpdate)
 }
 
 export const resetUpdate = () => {
@@ -37,5 +33,20 @@ export const unsubscribeUpdate = (fn) => {
     }
   }
 };
+
+const initUpdate = timestamp => {
+  update(timestamp)
+  id.current = global.requestAnimationFrame(initUpdate)
+
+  return {
+    reset: resetUpdate,
+    add: subscribeUpdate,
+    remove: unsubscribeUpdate,
+    update,
+    store,
+  }
+}
+
+
 
 export default initUpdate

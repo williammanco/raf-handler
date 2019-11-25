@@ -30,6 +30,23 @@ export default () => {
 }
 ```
 
+## From main function (v0.0.4) - Example
+
+```js
+import rAF from "raf-handler"
+
+
+export default () => {
+  const update = timestamp => console.log(timestamp)
+
+  const ticker = rAF();
+
+  ticker.add(update); // to add your function in a rAF array
+
+  ticker.remove(update) // to remove your function from a rAF array
+}
+```
+
 ## With react and hooks - Example
 
 ```js
