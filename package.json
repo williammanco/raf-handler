@@ -1,6 +1,6 @@
 {
   "name": "raf-handler",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Use for centralize request animation frame",
   "main": "lib/index.js",
   "umd:main": "lib/index.umd.js",
@@ -18,7 +18,7 @@
     "build": "microbundle --name core",
     "build:watch": "microbundle watch --name core",
     "release": "generate-release",
-    "publish": "publish"
+    "publish": "npm run publish"
   },
   "repository": {
     "type": "git",
