@@ -17,7 +17,8 @@
   "scripts": {
     "build": "microbundle --name core",
     "build:watch": "microbundle watch --name core",
-    "build:docs": "typedoc lib/index.d.ts"
+    "release": "generate-release",
+    "publish": "publish"
   },
   "repository": {
     "type": "git",
