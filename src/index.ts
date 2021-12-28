@@ -8,7 +8,7 @@ export interface TypesOptions {
 }
 
 export interface TypesStore {
-  rAF: any[];
+  rAF?: { (timestamp: number): void }[];
   fps: number;
   then: number;
   id?: number;
@@ -45,11 +45,12 @@ export const resetUpdate = () => {
   store.rAF = null;
 };
 
-export const subscribeUpdate = (fn: () => any) => {
+export const subscribeUpdate = (fn: (timestamp: number) => any) => {
+  if (!store.rAF) store.rAF = [];
   store.rAF.push(fn);
 };
 
-export const unsubscribeUpdate = (fn: () => any) => {
+export const unsubscribeUpdate = (fn: (timestamp: number) => any) => {
   const { rAF } = store;
   for (let i = 0, { length } = rAF; i < length; i += 1) {
     if (rAF[i] === fn) {
