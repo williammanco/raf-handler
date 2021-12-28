@@ -60,7 +60,7 @@ export const unsubscribeUpdate = (fn: () => any) => {
 };
 
 const initUpdate = (options?: TypesOptions) => {
-  if (options.fps) store.fps = options.fps;
+  if (options?.fps) store.fps = options.fps;
 
   store.id = window?.requestAnimationFrame(update);
 
