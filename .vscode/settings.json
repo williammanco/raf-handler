@@ -1,0 +1,14 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#f17c7c",
+    "activityBar.foreground": "#020202",
+    "activityBar.inactiveForeground": "#31313199",
+    "activityBarBadge.background": "#f8f4be",
+    "activityBarBadge.foreground": "#15202b"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "vscOrganizeImports.formatOnSave": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
