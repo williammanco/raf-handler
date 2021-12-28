@@ -15,8 +15,8 @@
   "types": "lib/index.d.ts",
   "sideEffects": false,
   "scripts": {
-    "build": "microbundle --name core",
-    "build:watch": "microbundle watch --name core",
+    "build": "microbundle --name raf-handler",
+    "build:watch": "microbundle watch --name raf-handler",
     "release": "generate-release",
     "publish": "npm run publish"
   },
