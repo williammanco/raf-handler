@@ -26,7 +26,7 @@ export default () => {
 };
 ```
 
-## From main function (v0.1.1) - Example
+## From main function (v0.1.2) - Example
 
 ```js
 import rAF from "raf-handler";
