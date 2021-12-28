@@ -1,6 +1,6 @@
 {
   "name": "raf-handler",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Use for centralize request animation frame",
   "main": "lib/index.js",
   "umd:main": "lib/index.umd.js",
